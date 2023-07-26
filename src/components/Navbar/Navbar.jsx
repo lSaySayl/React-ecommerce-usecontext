@@ -39,6 +39,7 @@ const Navbar = () => {
             >
               {item.text}
 
+              
               {item.to === "/cart" ? `${count}` : item.text}
             </NavLink>
           </li>

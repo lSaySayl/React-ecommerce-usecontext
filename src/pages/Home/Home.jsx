@@ -1,4 +1,5 @@
 import Card from "../../components/Card/Card";
+import ProductDetail from "../../components/ProductDetail/ProductDetail";
 import { useProductsContext } from "../../context/ProductsContext";
 
 const Home = () => {
@@ -7,7 +8,8 @@ const Home = () => {
   return (
     <>
       <h1>Home</h1>
-     <section className="grid grid-cols-5 grid- gap-4">
+      <ProductDetail/>
+     <section className="grid grid-cols-4 grid- gap-4">
      {products?.map((product) => (
         <Card
           key={product.id}
@@ -18,6 +20,7 @@ const Home = () => {
           price={product?.price || 0}
         />
       ))}
+     
      </section>
     </>
   );

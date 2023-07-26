@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { ProductsContext } from "../../context/ProductsContext";
 import Card from "../../components/Card/Card";
+import { useProductsContext } from "../../context/ProductsContext";
 
 const Home = () => {
-  const { products } = useContext(ProductsContext);
+  const { products } = useProductsContext();
 
   return (
     <>

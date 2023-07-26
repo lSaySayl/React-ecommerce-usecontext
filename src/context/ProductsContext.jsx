@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { apiProducts } from "../service/products";
 
 export const ProductsContext = createContext();
@@ -37,3 +37,6 @@ export const ProductsContextProvider = ({children}) => {
 
     )    
 }
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const useProductsContext = () => useContext(ProductsContext)

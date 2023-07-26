@@ -55,7 +55,8 @@ export const menuItemsRight = [
     text: "Sign In"
   },
   {
-    text: "🌼 0"
+    to: "/cart",
+    text: "🌼"
   }
 
 ];

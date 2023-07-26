@@ -1,15 +1,18 @@
-import React from "react";
+
 import ReactDOM from "react-dom/client";
 import { routes } from "./router/router";
 import { RouterProvider } from "react-router-dom";
 
 import "./index.css";
 import { ProductsContextProvider } from "./context/ProductsContext";
+import { ShoppingCartContextProvider } from "./context/ShoppingCartContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <ProductsContextProvider>
-      <RouterProvider router={routes} />
-    </ProductsContextProvider>
-  </React.StrictMode>
+
+    <ShoppingCartContextProvider>
+      <ProductsContextProvider>
+        <RouterProvider router={routes} />
+      </ProductsContextProvider>
+    </ShoppingCartContextProvider>
+
 );
